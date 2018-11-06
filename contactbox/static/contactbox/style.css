@@ -1,0 +1,53 @@
+/*Navbar part*/
+nav {
+    margin-bottom: 5em;
+    border-radius: 2%;
+}
+
+nav a:hover {
+    background-color: #e0e0e0;
+    border-radius: 10%;
+}
+
+/*Others*/
+.column-fit {
+width: 1px;
+white-space: nowrap;
+}
+
+.column-max {
+width: 5em;
+}
+
+.no-top-border {
+border-top: hidden;
+}
+
+.td-btn{
+width: 5em;
+}
+
+.link-text:hover span {
+    display: none;
+}
+
+#add.link-text:hover:after {
+    content: 'ADD';
+}
+
+#show.link-text:hover:after {
+    content: 'SHOW';
+}
+
+.search{
+    margin-bottom: 2em;
+}
+
+#number{
+    width: 10em;
+}
+
+#projector{
+    width: 3em;
+}
+

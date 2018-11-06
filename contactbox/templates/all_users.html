@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% load custom_filters %}
+
+{% block title %}Users{{ block.super }}{% endblock title %}
+
+{% block content %}
+    <div class="row">
+        <div class="col">
+            {% include 'search.html' %}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <table class="table table-striped no-top-border">
+                <thead class="">
+                <tr>
+                    <th scope="col" class="column-fit text-secondary">No</th>
+                    <th scope="col" class="column-fit text-secondary">First Name</th>
+                    <th scope="col" class="column-fit text-secondary">Last Name</th>
+                    <th scope="col" class="column-fit text-secondary">Email</th>
+                    <th scope="col" class="column-fit text-secondary">Phone</th>
+                    <th scope="col" class="column-fit text-secondary">Address</th>
+                    <th scope="col" class="column-fit text-secondary">Description</th>
+                    <th scope="col" class="column-max text-secondary">Edit</th>
+                    <th scope="col" class="column-max text-secondary" colspan="2">Del</th>
+                </tr>
+                </thead>
+                <tbody>
+    {#            {% for room in rooms %}#}
+    {#                <tr>#}
+    {#                    <td>{{ forloop.counter }}</td>#}
+    {#                    <td>#}
+    {#                        <a href="{% url 'room_details' room.id %}">{{ room.name }}</a>#}
+    {#                    </td>#}
+    {#                    <td>{{ room.capacity }}</td>#}
+    {#                    <td>#}
+    {#                        {{ room.is_projector|if_yes_no }}#}
+    {#                    </td>#}
+    {#                    <td>#}
+    {#                        {% if room.reservation.count > 0 %}#}
+    {#                            <a href="{% url 'room_details' room.id %}"#}
+    {#                               class="btn btn-outline-info btn-sm td-btn link-text" id="show"><span>{{ room.reservation|count_future }}</span></a>#}
+    {#                        {% else %}#}
+    {#                            <a href="{% url 'room_reservation' %}?rid={{ room.id }}"#}
+    {#                               class="btn btn-outline-info btn-sm td-btn link-text" id="add"><span>FREE</span></a>#}
+    {#                        {% endif %}#}
+    {#                    </td>#}
+    {#                    <td>#}
+    {#                        <a href="{% url 'edit_room' %}?pk={{ room.pk }}">#}
+    {#                            <button class="btn btn-info btn-xs glyphicon glyphicon-pencil">Edit</button>#}
+    {#                        </a>#}
+    {#                    </td>#}
+    {#                    <td>#}
+    {#                        <a href="{% url 'room_remove' room.pk %}">#}
+    {#                            <button class="btn btn-danger btn-xs glyphicon glyphicon-trash">Delete</button>#}
+    {#                        </a>#}
+    {#                    </td>#}
+    {#                </tr>#}
+    {#            {% endfor %}#}
+                </tbody>
+                <tfoot></tfoot>
+            </table>
+        </div>
+    </div>
+{% endblock content %}
+
